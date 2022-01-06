@@ -1,0 +1,144 @@
+######## Mod bind ########
+set $mod Mod4
+
+######## Fonts ########
+font pango:Ubuntu 9px
+
+######## Workspaces ########
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+######## Colors ########
+# class                 borda  fundo texto indicador borda filho
+client.focused          $bg     $bg   $fg    $bg         $bg
+client.focused_inactive $bg     $bg   $fg    $bg         $bg
+client.unfocused        $bg     $bg   $fg    $bg         $bg
+client.urgent           $bg     $bg   $fg    $bg         $bg
+client.placeholder      $bg     $bg   $fg    $bg         $bg
+
+client.background       $bg
+
+######## KeyBinds ########
+# Restart Polybar
+bindsym $mod+o exec ~/.config/polybar/scripts/launch.sh
+# Terminal
+bindsym $mod+Return exec st
+# Browser
+bindsym $mod+b exec google-chrome-stable
+# File Manager
+bindsym $mod+g exec thunar
+
+# Restart i3
+bindsym $mod+Shift+r restart
+
+# Launcher
+bindsym $mod+space exec dmenu_run
+
+# Screenshot
+bindsym --release $mod+shift+s exec flameshot gui
+bindsym Print exec flameshot full -c
+
+######## Window Setttings ########
+# Kill Focused Window
+bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# Change Focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Fullscreen mode
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Center
+bindsym $mod+Shift+c move position center
+
+# Window Maximized/floating
+bindsym $mod+Shift+space floating toggle
+
+# Hide/unhide windows. A little similar to minimizing/maximizing
+# windows on a DE 
+bindsym $mod+m move scratchpad
+bindsym $mod+shift+m scratchpad show
+
+# Windows Rules #
+for_window [class="(Lutris)"] move to workspace $ws10, floating enable, move position center
+for_window [class="(Lutris)"] move to workspace $ws10, floating enable, move position center
+for_window [class="(Steam)"] move to workspace $ws10, floating enable, move position center
+for_window [class="(Thunar)"] move to workspace $ws4, floating enable, move position center
+for_window [class="(St)"] move to workspace $ws2, floating enable, move position center
+for_window [class="(Blueman-manager)"] floating enable, move position center
+for_window [class="(Spotify)"] move to workspace $ws5, move position center
+for_window [class="(Lxappearance)"] floating enable, move position center
+for_window [class="(Pavucontrol)"] floating enable, move position center
+for_window [class="(Viewnior)"] floating enable, move position center
+for_window [class="(TelegramDesktop)"] move to workspace $ws3
+for_window [class="(Google-chrome)"] move to workspace $ws1
+
+# Floating Mode
+floating_modifier $mod
+
+# smart|urgent|focus|none
+focus_on_window_activation focus
+
+# Edge/Borders
+default_border pixel 1
+default_floating_border pixel 1
+new_window pixel 1
+hide_edge_borders both
+
+######## Workaspaces Binds ########
+# Browsing workspaces
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move window to another workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+
+### StartUP ### 
+exec --no-startup-id flameshot &
+exec --no-startup-id nitrogen --restore
+exec_always --no-startup-id ~/.config/polybar/scripts/launch.sh
+exec --no-startup-id ~/.config/i3/scripts/notdaemon.sh &
+exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id setxkbmap -layout us -variant intl
+exec --no-startip-id /usr/lib/xfce-polkit/xfce-polkit &
