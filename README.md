@@ -2,7 +2,7 @@
 
 ## i3-WM
 
-![Screenshot](https://github.com/ruizlenato/dotfiles/blob/master/i3wm.png)
+![Screenshot](https://github.com/ruizlenato/dotfiles/blob/main/Images/i3wm.png)
 
 | Dependency                                                                         | Description                                                 |
 | ---------------------------------------------------------------------------------- | ----------------------------------------------------------- |
