@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=DarkerMateria
+Comment=A custom version of materia-gtk-theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=DarkerMateria
+IconTheme=Papirus-Dark
+CursorTheme=Adwaita
+CursorSize=24

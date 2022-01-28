@@ -1,0 +1,18 @@
+/*/ Friends Panel Mod /*/
+aside.main-buddyFeed-buddyFeedRoot:hover {
+    position: inherit;
+    width: var(--buddy-feed-width);
+    opacity: 1;
+    transition: visibility 5s, opacity 0.5s linear;
+    left: 0;
+}
+
+aside.main-buddyFeed-buddyFeedRoot {
+    position: absolute;
+    width: 65px;
+    opacity: 0;
+    bottom: 0;
+    left: -30px;
+    top: 0;
+    z-index: 1;
+}
