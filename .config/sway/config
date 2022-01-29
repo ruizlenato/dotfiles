@@ -11,8 +11,9 @@ gaps inner 5
 gaps outer 1
 
 # Wallpaper
-#output * bg "/home/renato/Images/Wallpapers/Star-Wars-Jedi-Fallen-Order-4K-Wallpaper-.jpg" fill
-output * bg "/home/renato/Images/Wallpapers/waterfall.jpg" fill
+#output * bg "/home/renato/Pictures/Wallpapers/Star-Wars-Jedi-Fallen-Order-4K-Wallpaper-.jpg" fill
+#output * bg "/home/renato/Pictures/Wallpapers/waterfall.jpg" fill
+output * bg "/home/renato/Pictures/Wallpapers/lorenzo-lanfranconi.jpg" fill  
 
 # GTK Themes
 set $gnome-schema org.gnome.desktop.interface
@@ -72,7 +73,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 bindsym $mod+space exec yofi
 # Screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | wl-copy
-bindsym Print exec grim - | wl-copy    ![Gaps](/home/renato/dotfiles/Images/ReadMeImages/gapswm.png)
+bindsym Print exec grim - | wl-copy
 bindsym $mod+a exec grim /home/renato/Images/Screenshots/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
 
@@ -171,7 +172,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ## Autostart Applications ##
 exec mako
 exec_always --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit &
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Waybar
 bar {
