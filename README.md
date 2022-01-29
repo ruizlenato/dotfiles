@@ -14,8 +14,8 @@ All my dotfiles, blah blah.
 
 ### Quick Preview
 
-![Sway](Images/ReadMeImages/Sway+Waybar.png)
-![Gaps](Images/ReadMeImages/gapswm.png)
-![GTKTheme](Images/ReadMeImages/GTKTheme.png)
-![Yofi](Images/ReadMeImages/yofi.png)
+![Sway](Pictures/ReadMeImages/Sway+Waybar.png)
+![Gaps](Pictures/ReadMeImages/gapswm.png)
+![GTKTheme](Pictures/ReadMeImages/GTKTheme.png)
+![Yofi](Pictures/ReadMeImages/yofi.png)
 
