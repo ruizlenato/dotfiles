@@ -8,7 +8,7 @@ waybar
 yofi-git
 papirus-icon-theme
 foot
-xfce-polkit 
+polkit-gnome 
 grim
 slurp
 noto-fonts
