@@ -38,7 +38,7 @@
     },
     "custom/power": {
         "format": "",
-        "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'systemctl reboot' -b 'Shutdown'  'systemctl poweroff' --background=#000000 --button-background=#000000 --border-bottom=#000000 --text=#ffffff --button-text=#ffffff"
+        "on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Hibernate' 'systemctl suspend-then-hibernate' -b 'Logout' 'swaymsg exit' -b 'Restart' 'systemctl reboot' -b 'Shutdown'  'systemctl poweroff' --background=#000000 --button-background=#000000 --border-bottom=#000000 --text=#ffffff --button-text=#ffffff"
     },
     "pulseaudio": {
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
