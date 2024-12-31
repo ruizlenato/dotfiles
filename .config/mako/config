@@ -1,0 +1,17 @@
+markup=1
+actions=1
+default-timeout=5000
+
+# Format
+font=JetBrainsMono Nerd Font Medium 9
+width=300
+height=100
+max-icon-size=50
+border-size=0
+background-color=#000000
+text-color=#ffffff
+format=<b>%s</b> <span color="#d6b692">(%a)</span>\n%b
+
+# Hidden format
+[hidden]
+format=Hidden: %h [%t]

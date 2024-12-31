@@ -1,0 +1,26 @@
+# Wallpaper
+output * bg $HOME/Pictures/Wallpapers/waterfall.jpg fill
+
+# Font
+font pango:$fontName $fontStyle $fontSize
+
+# GTK Theme
+exec_always {
+    exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    exec gsettings set org.gnome.desktop.interface gtk-theme 'Materia-Dark'
+}
+
+# Windows
+default_border pixel 1
+default_floating_border pixel 1
+gaps inner 5
+gaps outer 1
+
+
+# Colors
+client.focused          #202020 #181818 #ffffff #202020   #313131
+client.focused_inactive #202020 #181818 #ffffff #202020   #202020
+client.unfocused        #202020 #181818 #ffffff #202020   #202020
+client.urgent           #202020 #181818 #ffffff #202020   #202020
+client.placeholder      #202020 #181818 #ffffff #202020   #202020
+client.background       #202020

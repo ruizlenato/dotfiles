@@ -1,0 +1,12 @@
+# Assign workspaces
+for_window [app_id="org.telegram.desktop"] move to workspace 3
+for_window [app_id="kitty"] move to workspace 2
+
+# Floating rules
+for_window [app_id="firefox" title="Firefox – Sharing Indicator"] floating enable
+for_window [app_id="firefox" title="Picture-in-Picture"] floating enable
+for_window [app_id="firefox" title="^.+\(Bitwarden*"] floating enable
+for_window [app_id="firefox" title="About Mozilla Firefox"] floating enable
+for_window [app_id="firefox" title="— Firefox"] floating enable
+for_window [app_id="firefox" title="^Firefox"] floating enable
+for_window [app_id="pinentry-gtk"] floating enable

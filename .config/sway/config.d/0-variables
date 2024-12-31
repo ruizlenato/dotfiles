@@ -1,0 +1,17 @@
+# Font
+set $fontName "SF Pro Display"
+set $fontStyle Regular
+set $fontSize 11
+
+# Terminal
+set $term kitty
+
+# Application Launcher
+set $menu fuzzel
+
+# Screenshot
+set $screenshot grim - | wl-copy
+set $snip_screenshot grim -g "$(slurp)" - | wl-copy
+
+# Mod key
+set $mod Mod4

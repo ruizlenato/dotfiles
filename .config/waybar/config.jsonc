@@ -1,0 +1,40 @@
+{
+	"position": "bottom",
+	"height": 5,
+	"modules-left": ["sway/workspaces", "sway/window"],
+	"modules-center": [],
+	"modules-right": ["tray", "wireplumber", "clock", "custom/power"],
+	// Modules configuration
+	"sway/workspaces": {
+		"format": "{name}",
+		"disable-scroll": true,
+		"all-outputs": true
+	},
+	"sway/window": {
+		"format": " | {}",
+		"max-length": 150,
+		"rewrite": {
+			"(.*) - Visual Studio Code": "Visual Studio Code",
+			"Telegram (.*)": "Telegram"
+		}
+	},
+	"wireplumber": {
+		"format": "{volume}%, ",
+		"format-muted": "muted, ",
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+	"clock": {
+		"format": "{:%a %d/%m, %H:%M}",
+		"tooltip-format": "<big>{:%Y %B},</big>\n<tt><big>{calendar}</big></tt>"
+	},
+	"tray": {
+		"format": " {icon}, ",
+		"icon-size": 17,
+		"spacing": 10
+	},
+	"custom/power": {
+		"format": "",
+		"on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Hibernate' 'systemctl suspend-then-hibernate' -b 'Logout' 'swaymsg exit' -b 'Restart' 'systemctl reboot' -b 'Shutdown'  'systemctl poweroff' --background=#000000 --button-background=#000000 --border-bottom=#000000 --text=#ffffff --button-text=#ffffff"
+	}
+}

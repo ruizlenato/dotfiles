@@ -1,0 +1,5 @@
+include $HOME/.config/sway/config.d/*
+
+# smart|urgent|focus|none
+focus_on_window_activation focus
+

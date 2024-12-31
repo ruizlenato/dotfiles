@@ -1,0 +1,57 @@
+* {
+    border-radius: 0;
+    font-family: 'Lilex Nerd Font';
+    font-size: 10pt;
+    min-height: 0;
+    border-bottom: 2px;
+}
+
+window#waybar {
+    background: #00000000;
+    color: #FFFFFF;
+}
+
+#workspaces {
+    background: transparent;
+    padding-left: 5px;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border-radius: 15px;
+}
+
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 5px;
+    min-width: 0;
+    color: white;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #FFFFFF;
+    background: #111;
+}
+
+#workspaces button.urgent {
+    color: #bd2c40;
+}
+
+
+#pulseaudio.muted {
+    color: #666;
+}
+
+#tray {
+    padding-right: 5px;
+}
+#clock {
+    padding-right: 2px;
+}
+
+#custom-power {
+    background-color: #000000;
+    padding-right: 5px;
+    border-radius: 50px;
+    margin: 5px 5px;
+}

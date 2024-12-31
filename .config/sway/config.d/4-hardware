@@ -1,0 +1,13 @@
+# Mouse settings
+input "1133:16500:Logitech_G305" {
+    accel_profile "flat"
+    pointer_accel -0.1
+}
+
+# Keyboard settings
+input "7847:2311:SEMITEK_USB-HID_Gaming_Keyboard" {
+    xkb_layout "us"
+    xkb_variant "intl"
+}
+
+

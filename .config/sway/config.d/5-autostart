@@ -1,0 +1,11 @@
+# XDG autostart
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# Notification
+exec mako
+
+# Polkit
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# Goldwarden
+#exec goldwarden daemonize
