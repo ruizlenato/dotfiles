@@ -24,12 +24,28 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+  ];
+
   programs = {
     sway = {
      enable = true;
+     extraPackages = with pkgs; [
+       waybar
+       grim
+       brightnessctl
+       slurp
+       wl-clipboard
+       mako
+       fuzzel
+     ];
     };
     fish = {
       enable = true;
+    };
+    goldwarden = {
+      enable = true;
+      useSshAgent = true;
     };
   };
 
@@ -54,6 +70,7 @@
     pipewire = {
       enable = true;
       pulse.enable = true;
+      alsa.enable = true;
     };
   };
 
